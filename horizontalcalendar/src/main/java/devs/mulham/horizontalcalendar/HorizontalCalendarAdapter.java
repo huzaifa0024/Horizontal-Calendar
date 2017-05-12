@@ -88,7 +88,7 @@ class HorizontalCalendarAdapter extends RecyclerView.Adapter<HorizontalCalendarA
         if (position == selectedItemPosition) {
             holder.txtDayNumber.setTextColor(horizontalCalendar.getTextColorSelected());
             holder.txtMonthName.setTextColor(horizontalCalendar.getTextColorSelected());
-            holder.txtDayName.setTextColor(horizontalCalendar.getTextColorSelected());
+            holder.txtDayName.setTextColor(Color.LTGRAY);
             holder.layoutBackground.setBackgroundColor(horizontalCalendar.getSelectedDateBackground());
             holder.selectionView.setVisibility(View.VISIBLE);
             holder.txtDayNumber.setStrokeWidth(1);
@@ -99,7 +99,7 @@ class HorizontalCalendarAdapter extends RecyclerView.Adapter<HorizontalCalendarA
         else {
             holder.txtDayNumber.setTextColor(horizontalCalendar.getTextColorNormal());
             holder.txtMonthName.setTextColor(horizontalCalendar.getTextColorNormal());
-            holder.txtDayName.setTextColor(horizontalCalendar.getTextColorNormal());
+            holder.txtDayName.setTextColor(Color.LTGRAY);
             holder.layoutBackground.setBackgroundColor(Color.TRANSPARENT);
             holder.selectionView.setVisibility(View.INVISIBLE);
             holder.txtDayNumber.setStrokeWidth(0);
