@@ -8,13 +8,14 @@
     android:orientation="vertical">
 
     <TextView
-        android:id="@+id/monthName"
+        android:id="@+id/dayName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/dayNumber"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="4dp"
-        android:text="Jan"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
+        android:text="Mon"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"/>
 
     <TextView
         android:id="@+id/dayNumber"
@@ -28,14 +29,15 @@
         android:textStyle="bold"/>
 
     <TextView
-        android:id="@+id/dayName"
+        android:id="@+id/monthName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/dayNumber"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="4dp"
-        android:text="Mon"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body2"/>
+        android:text="Jan"
+        android:visibility="invisible"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
+
 
     <View
         android:id="@+id/selection_view"

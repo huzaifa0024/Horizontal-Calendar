@@ -537,7 +537,7 @@ public class HorizontalCalendar {
             }
 
             if ((formatDayName == null) && showDayName) {
-                formatDayName = "EEE";
+                formatDayName = "E";
             }
             if (formatDayNumber == null) {
                 formatDayNumber = "dd";
