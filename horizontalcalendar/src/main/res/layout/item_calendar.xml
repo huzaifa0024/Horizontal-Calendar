@@ -17,8 +17,9 @@
         android:text="Mon"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"/>
 
-    <TextView
+    <devs.mulham.horizontalcalendar.CircularTextView
         android:id="@+id/dayNumber"
+        android:padding="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/monthName"

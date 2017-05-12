@@ -91,6 +91,9 @@ class HorizontalCalendarAdapter extends RecyclerView.Adapter<HorizontalCalendarA
             holder.txtDayName.setTextColor(horizontalCalendar.getTextColorSelected());
             holder.layoutBackground.setBackgroundColor(horizontalCalendar.getSelectedDateBackground());
             holder.selectionView.setVisibility(View.VISIBLE);
+            holder.txtDayNumber.setStrokeWidth(1);
+            holder.txtDayNumber.setStrokeColor(horizontalCalendar.getTextColorSelected());
+            holder.txtDayNumber.setSolidColor(Color.WHITE);
         }
         // Unselected Days
         else {
@@ -99,6 +102,9 @@ class HorizontalCalendarAdapter extends RecyclerView.Adapter<HorizontalCalendarA
             holder.txtDayName.setTextColor(horizontalCalendar.getTextColorNormal());
             holder.layoutBackground.setBackgroundColor(Color.TRANSPARENT);
             holder.selectionView.setVisibility(View.INVISIBLE);
+            holder.txtDayNumber.setStrokeWidth(0);
+            holder.txtDayNumber.setStrokeColor(horizontalCalendar.getTextColorNormal());
+            holder.txtDayNumber.setSolidColor(horizontalCalendar.getTextColorSelected());
         }
 
         holder.txtDayNumber.setText(DateFormat.format(horizontalCalendar.getFormatDayNumber(), day).toString());
@@ -152,7 +158,7 @@ class HorizontalCalendarAdapter extends RecyclerView.Adapter<HorizontalCalendarA
     }
 
     static class DayViewHolder extends RecyclerView.ViewHolder {
-        TextView txtDayNumber;
+        CircularTextView txtDayNumber;
         TextView txtDayName;
         TextView txtMonthName;
         View selectionView;
@@ -162,7 +168,7 @@ class HorizontalCalendarAdapter extends RecyclerView.Adapter<HorizontalCalendarA
         public DayViewHolder(View rootView) {
             super(rootView);
             this.rootView = rootView;
-            txtDayNumber = (TextView) rootView.findViewById(R.id.dayNumber);
+            txtDayNumber = (CircularTextView) rootView.findViewById(R.id.dayNumber);
             txtDayName = (TextView) rootView.findViewById(R.id.dayName);
             txtMonthName = (TextView) rootView.findViewById(R.id.monthName);
             layoutBackground = rootView.findViewById(R.id.layoutBackground);

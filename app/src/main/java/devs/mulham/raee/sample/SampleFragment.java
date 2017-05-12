@@ -38,7 +38,7 @@ public class SampleFragment extends Fragment {
                 .startDate(startDate.getTime())
                 .endDate(endDate.getTime())
                 .datesNumberOnScreen(5)
-                .dayNameFormat("EEE")
+                .dayNameFormat("E")
                 .dayNumberFormat("dd")
                 .monthFormat("MMM")
                 .textSize(14f, 24f, 14f)
