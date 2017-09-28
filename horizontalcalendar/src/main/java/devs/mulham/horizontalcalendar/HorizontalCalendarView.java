@@ -23,7 +23,7 @@ public class HorizontalCalendarView extends RecyclerView {
 
     private final float FLING_SCALE_DOWN_FACTOR = 0.5f;
     private final float DEFAULT_TEXT_SIZE_MONTH_NAME = 14f;
-    private final float DEFAULT_TEXT_SIZE_DAY_NUMBER = 24f;
+    private final float DEFAULT_TEXT_SIZE_DAY_NUMBER = 16f;
     private final float DEFAULT_TEXT_SIZE_DAY_NAME = 14f;
 
     public HorizontalCalendarView(Context context) {

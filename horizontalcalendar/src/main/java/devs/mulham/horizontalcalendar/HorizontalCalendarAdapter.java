@@ -32,6 +32,7 @@ class HorizontalCalendarAdapter extends RecyclerView.Adapter<HorizontalCalendarA
     private HorizontalCalendar horizontalCalendar;
     private int numberOfDates;
     private HorizontalCalendarView horizontalCalendarView;
+    private int selectedItemPosition;
 
     HorizontalCalendarAdapter(HorizontalCalendarView horizontalCalendarView, ArrayList<Date> datesList) {
         this.horizontalCalendarView = horizontalCalendarView;
@@ -90,7 +91,7 @@ class HorizontalCalendarAdapter extends RecyclerView.Adapter<HorizontalCalendarA
             holder.txtMonthName.setTextColor(horizontalCalendar.getTextColorSelected());
             holder.txtDayName.setTextColor(Color.LTGRAY);
             holder.layoutBackground.setBackgroundColor(horizontalCalendar.getSelectedDateBackground());
-            holder.selectionView.setVisibility(View.VISIBLE);
+            holder.selectionView.setVisibility(View.GONE);
             holder.txtDayNumber.setStrokeWidth(1);
             holder.txtDayNumber.setStrokeColor(horizontalCalendar.getTextColorSelected());
             holder.txtDayNumber.setSolidColor(Color.WHITE);
@@ -101,7 +102,7 @@ class HorizontalCalendarAdapter extends RecyclerView.Adapter<HorizontalCalendarA
             holder.txtMonthName.setTextColor(horizontalCalendar.getTextColorNormal());
             holder.txtDayName.setTextColor(Color.LTGRAY);
             holder.layoutBackground.setBackgroundColor(Color.TRANSPARENT);
-            holder.selectionView.setVisibility(View.INVISIBLE);
+            holder.selectionView.setVisibility(View.GONE);
             holder.txtDayNumber.setStrokeWidth(0);
             holder.txtDayNumber.setStrokeColor(horizontalCalendar.getTextColorNormal());
             holder.txtDayNumber.setSolidColor(horizontalCalendar.getTextColorSelected());

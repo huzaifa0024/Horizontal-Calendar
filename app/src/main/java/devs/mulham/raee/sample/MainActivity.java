@@ -44,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
                 .startDate(startDate.getTime())
                 .endDate(endDate.getTime())
                 .datesNumberOnScreen(7)
+                .textSizeDayNumber(12f)
                 .dayNameFormat("E")
                 .dayNumberFormat("dd")
                 .monthFormat("MMM")
