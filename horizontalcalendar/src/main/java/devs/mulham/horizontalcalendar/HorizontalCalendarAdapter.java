@@ -59,8 +59,14 @@ class HorizontalCalendarAdapter extends RecyclerView.Adapter<HorizontalCalendarA
 
                 if (!date.before(horizontalCalendar.getDateStartCalendar())
                         && !date.after(horizontalCalendar.getDateEndCalendar())) {
-                    horizontalCalendarView.setSmoothScrollSpeed(HorizontalLayoutManager.SPEED_SLOW);
+                    horizontalCalendarView.setSmoothScrollSpeed(HorizontalLayoutManager.SPEED_FAST);
                     horizontalCalendar.centerCalendarToPosition(holder.getAdapterPosition());
+                    HorizontalCalendarListener calendarListener = horizontalCalendar.getCalendarListener();
+                    if ((calendarListener != null) && !date.before(horizontalCalendar.getDateStartCalendar())
+                            && !date.after(horizontalCalendar.getDateEndCalendar())) {
+                         calendarListener.onDateSelected(date, holder.getAdapterPosition());
+                         selectedItemPosition = holder.getAdapterPosition();
+                    }
                 }
             }
         });
@@ -83,7 +89,7 @@ class HorizontalCalendarAdapter extends RecyclerView.Adapter<HorizontalCalendarA
     @Override
     public void onBindViewHolder(DayViewHolder holder, int position) {
         Date day = datesList.get(position);
-        int selectedItemPosition = horizontalCalendar.getSelectedDatePosition();
+    //    int selectedItemPosition = horizontalCalendar.getSelectedDatePosition();
 
         // Selected Day
         if (position == selectedItemPosition) {
