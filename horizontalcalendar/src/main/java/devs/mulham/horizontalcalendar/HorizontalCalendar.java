@@ -187,6 +187,13 @@ public class HorizontalCalendar {
                 calendarView.smoothScrollToPosition(position + shiftCells);
             } else if (position < centerItem) {
                 calendarView.smoothScrollToPosition(position - shiftCells);
+            }else{
+                calendarView.post(new Runnable() {
+                    @Override
+                    public void run() {
+                        calendarView.getAdapter().notifyDataSetChanged();
+                    }
+                });
             }
         }
     }

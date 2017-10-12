@@ -32,7 +32,7 @@ class HorizontalCalendarAdapter extends RecyclerView.Adapter<HorizontalCalendarA
     private HorizontalCalendar horizontalCalendar;
     private int numberOfDates;
     private HorizontalCalendarView horizontalCalendarView;
-    private int selectedItemPosition;
+    private int selectedItemPosition = -1;
 
     HorizontalCalendarAdapter(HorizontalCalendarView horizontalCalendarView, ArrayList<Date> datesList) {
         this.horizontalCalendarView = horizontalCalendarView;
@@ -41,6 +41,7 @@ class HorizontalCalendarAdapter extends RecyclerView.Adapter<HorizontalCalendarA
         this.horizontalCalendar = horizontalCalendarView.getHorizontalCalendar();
         this.numberOfDates = horizontalCalendar.getNumberOfDatesOnScreen();
         calculateCellWidth();
+
     }
 
     @Override
@@ -66,6 +67,13 @@ class HorizontalCalendarAdapter extends RecyclerView.Adapter<HorizontalCalendarA
                             && !date.after(horizontalCalendar.getDateEndCalendar())) {
                          calendarListener.onDateSelected(date, holder.getAdapterPosition());
                          selectedItemPosition = holder.getAdapterPosition();
+
+                        /*horizontalCalendar.post(new Runnable() {
+                            @Override
+                            public void run() {
+                               notifyDataSetChanged();
+                            }
+                        });*/
                     }
                 }
             }
@@ -89,7 +97,8 @@ class HorizontalCalendarAdapter extends RecyclerView.Adapter<HorizontalCalendarA
     @Override
     public void onBindViewHolder(DayViewHolder holder, int position) {
         Date day = datesList.get(position);
-    //    int selectedItemPosition = horizontalCalendar.getSelectedDatePosition();
+        if(selectedItemPosition==-1)
+            selectedItemPosition = horizontalCalendar.getSelectedDatePosition();
 
         // Selected Day
         if (position == selectedItemPosition) {

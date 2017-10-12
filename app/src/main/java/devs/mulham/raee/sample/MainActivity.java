@@ -34,10 +34,10 @@ public class MainActivity extends AppCompatActivity {
 
         /** start before 1 month from now */
         Calendar startDate = Calendar.getInstance();
-        startDate.add(Calendar.MONTH, -1);
+        startDate.add(Calendar.DAY_OF_WEEK, -3);
 
         final Calendar defaultDate = Calendar.getInstance();
-        defaultDate.add(Calendar.MONTH, -1);
+        defaultDate.add(Calendar.MONTH, 1);
         defaultDate.add(Calendar.DAY_OF_WEEK, +5);
 
         horizontalCalendar = new HorizontalCalendar.Builder(this, R.id.calendarView)
