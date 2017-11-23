@@ -44,15 +44,15 @@ public class MainActivity extends AppCompatActivity {
                 .startDate(startDate.getTime())
                 .endDate(endDate.getTime())
                 .datesNumberOnScreen(7)
-                .textSizeDayNumber(12f)
+                .textSizeDayNumber(20f)
                 .dayNameFormat("E")
                 .dayNumberFormat("dd")
                 .monthFormat("MMM")
                 .showDayName(true)
                 .showMonthName(true)
                 .defaultSelectedDate(defaultDate.getTime())
-                .textColor(Color.LTGRAY, Color.WHITE)
-                .selectedDateBackground(Color.TRANSPARENT)
+                .textColor(Color.BLACK, Color.BLACK)
+                .selectedDateBackground(Color.WHITE)
                 .build();
 
         horizontalCalendar.setCalendarListener(new HorizontalCalendarListener() {

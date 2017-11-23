@@ -104,23 +104,18 @@ class HorizontalCalendarAdapter extends RecyclerView.Adapter<HorizontalCalendarA
         if (position == selectedItemPosition) {
             holder.txtDayNumber.setTextColor(horizontalCalendar.getTextColorSelected());
             holder.txtMonthName.setTextColor(horizontalCalendar.getTextColorSelected());
-            holder.txtDayName.setTextColor(Color.LTGRAY);
+            holder.txtDayName.setTextColor(Color.BLACK);
             holder.layoutBackground.setBackgroundColor(horizontalCalendar.getSelectedDateBackground());
             holder.selectionView.setVisibility(View.GONE);
-            holder.txtDayNumber.setStrokeWidth(1);
-            holder.txtDayNumber.setStrokeColor(horizontalCalendar.getTextColorSelected());
-            holder.txtDayNumber.setSolidColor(Color.WHITE);
+
         }
         // Unselected Days
         else {
             holder.txtDayNumber.setTextColor(horizontalCalendar.getTextColorNormal());
             holder.txtMonthName.setTextColor(horizontalCalendar.getTextColorNormal());
-            holder.txtDayName.setTextColor(Color.LTGRAY);
+            holder.txtDayName.setTextColor(Color.BLACK);
             holder.layoutBackground.setBackgroundColor(Color.TRANSPARENT);
             holder.selectionView.setVisibility(View.GONE);
-            holder.txtDayNumber.setStrokeWidth(0);
-            holder.txtDayNumber.setStrokeColor(horizontalCalendar.getTextColorNormal());
-            holder.txtDayNumber.setSolidColor(horizontalCalendar.getTextColorSelected());
         }
 
         holder.txtDayNumber.setText(DateFormat.format(horizontalCalendar.getFormatDayNumber(), day).toString());
@@ -174,7 +169,7 @@ class HorizontalCalendarAdapter extends RecyclerView.Adapter<HorizontalCalendarA
     }
 
     static class DayViewHolder extends RecyclerView.ViewHolder {
-        CircularTextView txtDayNumber;
+        TextView txtDayNumber;
         TextView txtDayName;
         TextView txtMonthName;
         View selectionView;
@@ -184,7 +179,7 @@ class HorizontalCalendarAdapter extends RecyclerView.Adapter<HorizontalCalendarA
         public DayViewHolder(View rootView) {
             super(rootView);
             this.rootView = rootView;
-            txtDayNumber = (CircularTextView) rootView.findViewById(R.id.dayNumber);
+            txtDayNumber = (TextView) rootView.findViewById(R.id.dayNumber);
             txtDayName = (TextView) rootView.findViewById(R.id.dayName);
             txtMonthName = (TextView) rootView.findViewById(R.id.monthName);
             layoutBackground = rootView.findViewById(R.id.layoutBackground);
