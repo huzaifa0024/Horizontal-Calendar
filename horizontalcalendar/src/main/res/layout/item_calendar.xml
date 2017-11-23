@@ -5,17 +5,20 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:gravity="center"
-    android:orientation="vertical">
+    android:padding="10dp"
+    android:orientation="vertical"
+    android:background="#ffbe4b">
 
     <TextView
-        android:id="@+id/dayName"
+        android:id="@+id/monthName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/dayNumber"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="4dp"
-        android:text="Mon"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body2"/>
+        android:text="Jan"
+        android:visibility="visible"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
+
 
     <devs.mulham.horizontalcalendar.CircularTextView
         android:id="@+id/dayNumber"
@@ -30,15 +33,14 @@
         android:textStyle="bold"/>
 
     <TextView
-        android:id="@+id/monthName"
+        android:id="@+id/dayName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/dayNumber"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="4dp"
-        android:text="Jan"
-        android:visibility="invisible"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
-
+        android:text="Mon"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"/>
 
     <View
         android:id="@+id/selection_view"
