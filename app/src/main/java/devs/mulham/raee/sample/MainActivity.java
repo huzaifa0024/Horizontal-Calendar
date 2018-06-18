@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
 
         /** end after 1 month from now */
         Calendar endDate = Calendar.getInstance();
-        endDate.add(Calendar.MONTH, 1);
+        endDate.add(Calendar.MONTH, 2);
 
         /** start before 1 month from now */
         Calendar startDate = Calendar.getInstance();
@@ -54,6 +54,8 @@ public class MainActivity extends AppCompatActivity {
                 .textColor(Color.BLACK, Color.BLACK)
                 .selectedDateBackground(Color.WHITE)
                 .build();
+
+        horizontalCalendar.defaultSelectedDate = defaultDate.getTime();
 
         horizontalCalendar.setCalendarListener(new HorizontalCalendarListener() {
             @Override

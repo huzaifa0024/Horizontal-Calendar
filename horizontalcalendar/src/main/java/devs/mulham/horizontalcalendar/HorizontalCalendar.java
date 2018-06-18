@@ -33,6 +33,7 @@ public class HorizontalCalendar {
     private ArrayList<Date> mListDays;
     private boolean loading;
     private DateHandler handler;
+    public Date defaultSelectedDate;
 
     //Start & End Dates
     private Date dateStartCalendar;
@@ -249,6 +250,8 @@ public class HorizontalCalendar {
         return calendarView.getPositionOfCenterItem();
     }
 
+
+
     /**
      * @param position The position of date
      * @return the date on this index
@@ -403,6 +406,10 @@ public class HorizontalCalendar {
         boolean showDayName = true;
         Date defaultSelectedDate;
 
+
+        public Date getDefaultSelectedDate(){
+            return defaultSelectedDate;
+        }
         /**
          * @param rootView pass the rootView for the Fragment where HorizontalCalendar is attached
          * @param viewId the id specified for HorizontalCalendarView in your layout
@@ -636,5 +643,10 @@ public class HorizontalCalendar {
 
             }
         }
+    }
+
+    public int getDefaultDatePosition(){
+
+        return positionOfDate(this.defaultSelectedDate);
     }
 }

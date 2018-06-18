@@ -155,4 +155,5 @@ public class HorizontalCalendarView extends RecyclerView {
         }
         return firstVisibilePosition + (numberOfDatesOnScreen / 2);
     }
+
 }
