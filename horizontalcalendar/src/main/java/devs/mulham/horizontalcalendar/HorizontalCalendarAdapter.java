@@ -3,6 +3,7 @@ package devs.mulham.horizontalcalendar;
 import android.content.Context;
 import android.graphics.Color;
 import android.graphics.Point;
+import android.graphics.Typeface;
 import android.os.Build;
 import android.support.v7.widget.RecyclerView;
 import android.text.format.DateFormat;
@@ -105,6 +106,8 @@ class HorizontalCalendarAdapter extends RecyclerView.Adapter<HorizontalCalendarA
             holder.txtDayNumber.setTextColor(horizontalCalendar.getTextColorSelected());
             holder.txtMonthName.setTextColor(horizontalCalendar.getTextColorSelected());
             holder.txtDayName.setTextColor(Color.BLACK);
+            holder.txtDayName.setTypeface( holder.txtDayName.getTypeface(), Typeface.BOLD);
+            holder.txtDayNumber.setTypeface( holder.txtDayNumber.getTypeface(), Typeface.BOLD);
             holder.layoutBackground.setBackgroundColor(horizontalCalendar.getSelectedDateBackground());
             holder.selectionView.setVisibility(View.GONE);
 
@@ -114,6 +117,8 @@ class HorizontalCalendarAdapter extends RecyclerView.Adapter<HorizontalCalendarA
             holder.txtDayNumber.setTextColor(horizontalCalendar.getTextColorNormal());
             holder.txtMonthName.setTextColor(horizontalCalendar.getTextColorNormal());
             holder.txtDayName.setTextColor(Color.BLACK);
+            holder.txtDayName.setTypeface( holder.txtDayName.getTypeface(), Typeface.BOLD);
+            holder.txtDayNumber.setTypeface( holder.txtDayNumber.getTypeface(), Typeface.BOLD);
             holder.layoutBackground.setBackgroundColor(Color.TRANSPARENT);
             holder.selectionView.setVisibility(View.GONE);
         }
