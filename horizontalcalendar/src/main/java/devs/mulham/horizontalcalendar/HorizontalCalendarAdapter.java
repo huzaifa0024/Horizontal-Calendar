@@ -100,6 +100,8 @@ class HorizontalCalendarAdapter extends RecyclerView.Adapter<HorizontalCalendarA
         Date day = datesList.get(position);
         if(selectedItemPosition==-1)
             selectedItemPosition = horizontalCalendar.getDefaultDatePosition();
+        else
+            selectedItemPosition = horizontalCalendar.getSelectedDatePosition();
 
         // Selected Day
         if (position == selectedItemPosition) {
