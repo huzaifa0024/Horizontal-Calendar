@@ -103,6 +103,15 @@ class HorizontalCalendarAdapter extends RecyclerView.Adapter<HorizontalCalendarA
         else
             selectedItemPosition = horizontalCalendar.getSelectedDatePosition();
 
+        Date date = datesList.get(position);
+
+        HorizontalCalendarListener calendarListener = horizontalCalendar.getCalendarListener();
+        if ((calendarListener != null) && !date.before(horizontalCalendar.getDateStartCalendar())
+                && !date.after(horizontalCalendar.getDateEndCalendar())) {
+            calendarListener.onDateSelected(date, holder.getAdapterPosition());
+
+        }
+
         // Selected Day
         /*if (position == selectedItemPosition) {
             holder.txtDayNumber.setTextColor(horizontalCalendar.getTextColorSelected());
