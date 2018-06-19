@@ -103,7 +103,7 @@ class HorizontalCalendarAdapter extends RecyclerView.Adapter<HorizontalCalendarA
         else
             selectedItemPosition = horizontalCalendar.getSelectedDatePosition();
 
-        Date date = datesList.get(position);
+        Date date = datesList.get(selectedItemPosition);
 
         HorizontalCalendarListener calendarListener = horizontalCalendar.getCalendarListener();
         if ((calendarListener != null) && !date.before(horizontalCalendar.getDateStartCalendar())
