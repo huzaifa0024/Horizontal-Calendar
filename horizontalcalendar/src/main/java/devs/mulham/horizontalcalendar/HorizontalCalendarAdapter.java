@@ -103,7 +103,7 @@ class HorizontalCalendarAdapter extends RecyclerView.Adapter<HorizontalCalendarA
         else
             selectedItemPosition = horizontalCalendar.getSelectedDatePosition();
        //new logic for auto selecting the date that is in center
-        if(selectedItemPosition>-1) {
+        /*if(selectedItemPosition>-1) {
             Date date = datesList.get(selectedItemPosition);
 
             HorizontalCalendarListener calendarListener = horizontalCalendar.getCalendarListener();
@@ -112,7 +112,7 @@ class HorizontalCalendarAdapter extends RecyclerView.Adapter<HorizontalCalendarA
                 calendarListener.onDateSelected(date, holder.getAdapterPosition());
 
             }
-        }
+        }*/
 
         // Selected Day
         /*if (position == selectedItemPosition) {

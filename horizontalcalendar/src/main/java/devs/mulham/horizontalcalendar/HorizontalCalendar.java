@@ -47,12 +47,12 @@ public class HorizontalCalendar {
             if (newState == RecyclerView.SCROLL_STATE_IDLE) {
                 //On scroll end, the dateSelect event is call
                 //and agenda is center to the good item
-          /*      int position = calendarView.getPositionOfCenterItem();
+                int position = calendarView.getPositionOfCenterItem();
 
                 if (calendarListener != null) {
                     calendarListener.onDateSelected(mListDays.get(position), position);
                 }
-*/
+
             }
         }
 
