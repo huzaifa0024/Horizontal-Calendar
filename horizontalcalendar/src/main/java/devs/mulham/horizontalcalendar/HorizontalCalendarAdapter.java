@@ -104,7 +104,7 @@ class HorizontalCalendarAdapter extends RecyclerView.Adapter<HorizontalCalendarA
             selectedItemPosition = horizontalCalendar.getSelectedDatePosition();
 
         // Selected Day
-        if (position == selectedItemPosition) {
+        /*if (position == selectedItemPosition) {
             holder.txtDayNumber.setTextColor(horizontalCalendar.getTextColorSelected());
             holder.txtMonthName.setTextColor(horizontalCalendar.getTextColorSelected());
             holder.txtDayName.setTextColor(Color.BLACK);
@@ -113,9 +113,9 @@ class HorizontalCalendarAdapter extends RecyclerView.Adapter<HorizontalCalendarA
             holder.layoutBackground.setBackgroundColor(horizontalCalendar.getSelectedDateBackground());
             holder.selectionView.setVisibility(View.GONE);
 
-        }
+        }*/
         // Unselected Days
-        else {
+      //  else {
             holder.txtDayNumber.setTextColor(horizontalCalendar.getTextColorNormal());
             holder.txtMonthName.setTextColor(horizontalCalendar.getTextColorNormal());
             holder.txtDayName.setTextColor(Color.BLACK);
@@ -123,7 +123,7 @@ class HorizontalCalendarAdapter extends RecyclerView.Adapter<HorizontalCalendarA
             holder.txtDayNumber.setTypeface( holder.txtDayNumber.getTypeface(), Typeface.BOLD);
             holder.layoutBackground.setBackgroundColor(Color.TRANSPARENT);
             holder.selectionView.setVisibility(View.GONE);
-        }
+     //   }
 
         holder.txtDayNumber.setText(DateFormat.format(horizontalCalendar.getFormatDayNumber(), day).toString());
         holder.txtDayNumber.setTextSize(TypedValue.COMPLEX_UNIT_SP,
